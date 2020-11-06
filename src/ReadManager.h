@@ -4,10 +4,11 @@
 
 #ifndef MY_PROJECT_NAME_READMANAGER_H
 #define MY_PROJECT_NAME_READMANAGER_H
-
-
+#include <iostream>
+using namespace std;
 class ReadManager {
-
+public:
+    void read();
 };
 
 

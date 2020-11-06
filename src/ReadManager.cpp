@@ -3,3 +3,12 @@
 //
 
 #include "ReadManager.h"
+/*
+void ReadManager::read() {
+    string dataFromJSonFile;
+    dataFromJSonFile = FileManager::read("Person.json");
+    personListFromJson = FileManager::deserialize(dataFromJSonFile);
+    for (const Person &person: personListFromJson) {
+        std::cout << person.toString() << std::endl;
+    }
+}*/
