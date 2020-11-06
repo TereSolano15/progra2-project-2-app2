@@ -4,10 +4,15 @@
 
 #ifndef MY_PROJECT_NAME_FILEMANAGER_H
 #define MY_PROJECT_NAME_FILEMANAGER_H
-
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
 
 class FileManager {
-
+public:
+    void saveBinary();
 };
 
 
