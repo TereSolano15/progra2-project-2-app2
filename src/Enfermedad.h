@@ -8,9 +8,9 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-
+#include "ObjetoBase.h"
 using namespace std;
-class Enfermedad {
+class Enfermedad : public ObjetoBase{
 
 private:
 
@@ -33,7 +33,7 @@ public:
 
     void setSecuencia(const string &secuencia);
 
-    string toString();
+    string toString() override;
 
 };
 

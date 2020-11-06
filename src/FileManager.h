@@ -8,11 +8,17 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include "Enfermedad.h"
+#include "Paciente.h"
+#include <../lib/nlohmann/json.hpp>
+using nlohmann::json;
 using namespace std;
 
 class FileManager {
 public:
     void saveBinary();
+    vector<Paciente> deserialize(const string& _data);
+    string read(const string &filename);
 };
 
 

@@ -4,7 +4,7 @@
 
 #ifndef MY_PROJECT_NAME_PACIENTE_H
 #define MY_PROJECT_NAME_PACIENTE_H
-
+#include "ObjetoBase.h"
 #include <istream>
 #include <sstream>
 #include <iostream>
@@ -14,7 +14,7 @@
 #include <fstream>
 using namespace std;
 
-class Paciente{
+class Paciente: public ObjetoBase{
 
 private:
 
@@ -57,7 +57,7 @@ public:
 
     void setEnfermedadList(const std::vector<Enfermedad> &enfermedadList);
 
-    string toString();
+    string toString() override;
 
 };
 
