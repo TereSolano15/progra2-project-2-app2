@@ -16,7 +16,8 @@ public:
 
     Menu();
 
-    void MenuPrincipal();
+    void mostrar0();
+    int menuPrincip();
 
     virtual ~Menu();
 
