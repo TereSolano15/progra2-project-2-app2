@@ -7,4 +7,4 @@ set(SOURCES ${SOURCES})
 
 add_executable(${BINARY}_run ${SOURCES})
 
-add_library(${BINARY}_lib STATIC ${SOURCES} Menu.cpp Menu.h FileManager.cpp FileManager.h)
+add_library(${BINARY}_lib STATIC ${SOURCES} Menu.cpp Menu.h FileManager.cpp FileManager.h ReadManager.cpp ReadManager.h)
