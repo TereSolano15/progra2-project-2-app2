@@ -36,7 +36,7 @@ void Menu::mostrar0() {
 
 int Menu::menuPrincip() {
     int opcion;
-    cout<<"Bienvenido al Programa de Carga de Datos"<<"\n\n";
+    cout<<"Bienvenido al Programa de Analisis de Datos"<<"\n\n";
     cout<<"\t Elija una opcion: "<<endl;
     cout<<"\t [1] Analisis#1 " <<endl;
     cout<<"\t [2] Analisis#2 "<<endl;

@@ -6,9 +6,7 @@
 int main(){
 
     Menu* menu = new Menu();
-
-    menu->MenuPrincipal();
-
+    menu->mostrar0();
     delete menu;
 
     return 0;
