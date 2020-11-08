@@ -33,6 +33,14 @@ void Enfermedad::setNombre(const string &nombre) {
     Enfermedad::nombre = nombre;
 }
 
+int Enfermedad::getCantidad() const {
+    return cantidad;
+}
+
+void Enfermedad::setCantidad(int cantidad) {
+    Enfermedad::cantidad = cantidad;
+}
+
 string Enfermedad::toString() {
     stringstream s;
 
@@ -41,6 +49,8 @@ string Enfermedad::toString() {
 
     return s.str();
 }
+
+
 
 
 

@@ -10,7 +10,7 @@
 
 class AnalisisSrategy {
 public:
-    virtual vector<ObjetoBase> analisis(Paciente) = 0;
+    virtual vector<Paciente> analisis(Paciente) = 0;
     virtual ~AnalisisSrategy();
 };
 

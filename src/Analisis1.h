@@ -7,11 +7,17 @@
 #include "AnalisisSrategy.h"
 #include "Enfermedad.h"
 #include "ObjetoBase.h"
-class Analisis1 : public AnalisisSrategy{
+#include <stdlib.h>
+#include <stdio.h>
+
+class Analisis1 : public AnalisisSrategy {
 public:
     Analisis1();
 
-    virtual vector<ObjetoBase> analisis(Paciente);
+
+    virtual vector<Paciente> analisis(Paciente);
+
+    bool insertaOrdenado(Enfermedad);
 
     virtual ~Analisis1();
 

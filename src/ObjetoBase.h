@@ -8,7 +8,6 @@
 #include <sstream>
 #include <string>
 using namespace std;
-
 class ObjetoBase {
 public:
     virtual ~ObjetoBase();

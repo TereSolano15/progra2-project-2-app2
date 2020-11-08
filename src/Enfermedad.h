@@ -16,6 +16,7 @@ private:
 
     string nombre;
     string secuencia;
+    int cantidad;
 
 public:
 
@@ -32,6 +33,10 @@ public:
     const string &getSecuencia() const;
 
     void setSecuencia(const string &secuencia);
+
+    int getCantidad() const;
+
+    void setCantidad(int cantidad);
 
     string toString() override;
 
