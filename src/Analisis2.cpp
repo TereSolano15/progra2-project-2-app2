@@ -4,6 +4,11 @@
 
 #include "Analisis2.h"
 
+
+
+
+
+
 Analisis2::Analisis2() {}
 
 Analisis2::~Analisis2() {
