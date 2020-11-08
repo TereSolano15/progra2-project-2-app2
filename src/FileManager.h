@@ -16,9 +16,10 @@ using namespace std;
 
 class FileManager {
 public:
-    void saveBinary();
-    vector<Paciente> deserialize(const string& _data);
-    string read(const string &filename);
+    static void save(const string& jsonData, const std::string &filename);
+    static string read(const std::string &filename);
+    static string serialize(const vector<Paciente>& _personList);
+    static vector<Paciente> deserialize(const string& _data);
 };
 
 

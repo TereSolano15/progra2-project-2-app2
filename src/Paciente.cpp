@@ -12,8 +12,6 @@ Paciente::Paciente(istream& input) {
 
     //preguntar mannana al profe, por el getline tiene problemas con, el int en el segundo dato por parametro
 
-
-
     //read the csv file until the character ',' and discards it
     getline(input, this->id, ',');
     getline(input, this->nombre, ',');

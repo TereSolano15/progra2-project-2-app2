@@ -1,3 +1,4 @@
+/*
 //
 // Created by Tere Solano on 6/11/2020.
 //
@@ -7,15 +8,13 @@
 #include "AnalisisSrategy.h"
 #include "Enfermedad.h"
 #include "ObjetoBase.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 class Analisis1 : public AnalisisSrategy {
 public:
     Analisis1();
 
 
-    virtual vector<Paciente> analisis(Paciente);
+    virtual string analisis(Paciente);
 
     bool insertaOrdenado(Enfermedad);
 
@@ -25,3 +24,4 @@ public:
 
 
 #endif //MY_PROJECT_NAME_ANALISIS1_H
+*/

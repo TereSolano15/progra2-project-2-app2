@@ -3,13 +3,25 @@
 //
 #include <iostream>
 #include "Menu.h"
+#include "FileManager.h"
+#include "Paciente.h"
 int main(){
 
 
-    Menu* menu = new Menu();
+    vector<Paciente> pacienteListFromJson;
+    cout << "\n\nDeserialización del Json" << endl;
+
+    string dataFromJSonFile;
+    dataFromJSonFile = FileManager::read("C:\\Users\\Tere Solano\\CLionProjects\\progra2-project-02-app2-lions\\cmake-build-debug\\src\\Paciente.json");
+    pacienteListFromJson = FileManager::deserialize(dataFromJSonFile);
+    //for (Paciente paciente: pacienteListFromJson) {
+      //  std::cout << paciente.toString() << std::endl;
+    //}
+
+      /*Menu* menu = new Menu();
     menu->mostrar0();
     delete menu;
-
+*/
     return 0;
 
 }

@@ -1,3 +1,4 @@
+/*
 //
 // Created by Tere Solano on 6/11/2020.
 //
@@ -9,11 +10,14 @@ Analisis1::Analisis1() {}
 Analisis1::~Analisis1() {
 
 }
+*/
 /*
 Análisis #1: Crear un reporte con todas las enfermedades que
 muestre para cada una los pacientes que tienen susceptibilidad
 de tenerla. Las enfermedades deben mostrarse ordenadas de mayor
-a menor incidencia.*/
+a menor incidencia.*//*
+
+*/
 /*vector<ObjetoBase> Analisis1::analisis(Paciente paciente) {
 string secuencia= paciente.getSecuencia();
 int cantidad = 0;
@@ -31,14 +35,18 @@ int cantidad = 0;
             }
         }
     }
-}*/
-vector<Paciente> Analisis1::analisis(Paciente paciente) {
+}*//*
 
+string Analisis1::analisis(Paciente paciente) {
+    string secuencia= paciente.getSecuencia();
     int cantidad = 0;
     int tamanno = paciente.getEnfermedadList().data()->getNombre().length();
     string enfermedad = paciente.getEnfermedadList().data()->getNombre();
     int caracteresIguales;
     vector<Paciente> listaEnfermedad;
+    vector<string> listaSecuencias;
+    listaSecuencias.push_back(paciente.getSecuencia());
+
     for (int i = 0; secuencia[i] != '\0'; i++) {
         if (secuencia[i] == enfermedad[0]) {
             caracteresIguales = 0;
@@ -55,5 +63,6 @@ vector<Paciente> Analisis1::analisis(Paciente paciente) {
             }
         }
     }
-    return listaEnfermedad;
+    return listaEnfermedad.data()->toString();
 }
+*/

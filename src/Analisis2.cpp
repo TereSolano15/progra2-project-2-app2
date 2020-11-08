@@ -1,3 +1,4 @@
+/*
 //
 // Created by Fabio Villalobos on 8/11/2020.
 //
@@ -9,8 +10,9 @@
 
 
 
-Analisis2::Analisis2() {}
+//Analisis2::Analisis2() {}
 
 Analisis2::~Analisis2() {
 
 }
+*/
