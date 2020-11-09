@@ -4,12 +4,9 @@
 
 #include "Analisis2.h"
 
-void Analisis2::vaciar(int array[])
-{
+void Analisis2::vaciar(int array[]){
 
-    for(int i=0;i<5;i++)
-    {
-
+    for(int i=0;i<5;i++){
         array[i]=0;
     }
 }
@@ -17,17 +14,12 @@ void Analisis2::vaciar(int array[])
 
 string Analisis2::analisis(Paciente paciente) {
     stringstream s;
-    string secuencia= paciente.getSecuencia();
-
-
     string cadena=paciente.getSecuencia();
     string adn="ACGT ";
     int incidencias[4];
     vaciar(incidencias);
 
-
-    for(int numeroPalabra=0;true;numeroPalabra++)
-    {
+    for(int numeroPalabra=0;true;numeroPalabra++){
         vaciar(incidencias);
 
         if(cadena=="FIN"){break;}
@@ -43,27 +35,18 @@ string Analisis2::analisis(Paciente paciente) {
             }
         }
 
-        s<<endl<<"Palabra numero "<<numeroPalabra<<endl;
-
-
         for(int i=0;i<5;i++)
         {
 
             if(incidencias[i]>0)
             {
 
-                s<<"La letra "<<adn[i]<<" se uso "<<incidencias[i]<<" veces "<<endl;
+                s<<adn[i]<<" "<<incidencias[i]<<" %"<<endl;
             }
         }
     }
     return s.str();
 }
-
-
-
-
-
-
 
 Analisis2::Analisis2() {}
 
