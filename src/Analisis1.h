@@ -6,7 +6,6 @@
 #define MY_PROJECT_NAME_ANALISIS1_H
 #include "AnalisisSrategy.h"
 #include "Enfermedad.h"
-#include "ObjetoBase.h"
 
 class Analisis1 : public AnalisisSrategy {
 public:
@@ -15,7 +14,6 @@ public:
     string analisis(vector<Paciente>) override;
 
     vector<Enfermedad> readCsv2();
-
 
     virtual ~Analisis1();
 

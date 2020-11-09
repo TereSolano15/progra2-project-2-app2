@@ -27,7 +27,10 @@ void Menu::mostrar0() {
                 system("CLS");
                 break;
             case 3:
-                cout<<analisis2.analisis(pacienteListFromJson)<<endl;
+                int posicion;
+                for(int i=0; i< pacienteListFromJson.size();i++)
+                cout<<"Posicion "<<i<<": "<<pacienteListFromJson.at(i).getNombre()<<endl;
+                cout<<analisis2.analisis(pacienteListFromJson);
                 system("pause");
                 system("CLS");
                 break;

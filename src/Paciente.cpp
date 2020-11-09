@@ -56,7 +56,7 @@ void Paciente::setCorreo(const string &correo) {
     Paciente::correo = correo;
 }
 
-const string &Paciente::getSecuencia() const {
+const string Paciente::getSecuencia() const {
     return secuencia;
 }
 

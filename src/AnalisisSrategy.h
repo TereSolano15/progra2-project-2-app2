@@ -5,7 +5,6 @@
 #ifndef MY_PROJECT_NAME_ANALISISSRATEGY_H
 #define MY_PROJECT_NAME_ANALISISSRATEGY_H
 #include <vector>
-#include "ObjetoBase.h"
 #include "Paciente.h"
 
 class AnalisisSrategy {

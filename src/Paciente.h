@@ -4,7 +4,6 @@
 
 #ifndef MY_PROJECT_NAME_PACIENTE_H
 #define MY_PROJECT_NAME_PACIENTE_H
-#include "ObjetoBase.h"
 #include <istream>
 #include <sstream>
 #include <iostream>
@@ -14,7 +13,7 @@
 #include <fstream>
 using namespace std;
 
-class Paciente: public ObjetoBase{
+class Paciente{
 
 private:
 
@@ -49,7 +48,7 @@ public:
 
     void setCorreo(const string &correo);
 
-    const string &getSecuencia() const;
+    const string getSecuencia() const;
 
     void setSecuencia(const string &secuencia);
 
@@ -57,7 +56,7 @@ public:
 
     void setEnfermedadList(const std::vector<Enfermedad> &enfermedadList);
 
-    string toString() override;
+    virtual string toString();
 
 };
 

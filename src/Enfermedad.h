@@ -9,10 +9,9 @@
 #include <string>
 #include <sstream>
 #include <vector>
-#include "ObjetoBase.h"
 
 using namespace std;
-class Enfermedad : public ObjetoBase{
+class Enfermedad{
 
 private:
     string nombre;
@@ -39,7 +38,7 @@ public:
 
     void setCantidad(int cantidad);
 
-    string toString() override;
+    virtual string toString() ;
 
 };
 

@@ -6,15 +6,13 @@
 #define MY_PROJECT_NAME_ANALISIS2_H
 #include "AnalisisSrategy.h"
 #include "Enfermedad.h"
-#include "ObjetoBase.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+
 
 class Analisis2: public AnalisisSrategy{
 public:
     Analisis2();
-
-    void vaciar(int array[]);
 
     string analisis(vector<Paciente>) override;
 

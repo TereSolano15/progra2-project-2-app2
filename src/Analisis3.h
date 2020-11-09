@@ -6,7 +6,6 @@
 #define MY_PROJECT_NAME_ANALISIS3_H
 #include "AnalisisSrategy.h"
 #include "Enfermedad.h"
-#include "ObjetoBase.h"
 
 class Analisis3 : public AnalisisSrategy{
 public:
