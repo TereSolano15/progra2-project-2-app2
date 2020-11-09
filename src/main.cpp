@@ -12,8 +12,8 @@ int main(){
     cout << "\n\nDeserialización del Json" << endl;
 
     string dataFromJSonFile;
-    dataFromJSonFile = FileManager::read("F:\\Universidad\\2020\\Segundo semestre\\Programacion 2\\Proyectos\\proyecto 2\\app2\\progra2-project-02-app2-lions\\cmake-build-debug\\src\\JsonCompleto.json");
-    pacienteListFromJson = FileManager::deserialize(dataFromJSonFile);
+    dataFromJSonFile = FileManager::read("C:\\Users\\Tere Solano\\CLionProjects\\progra2-project-02-app2-lions\\cmake-build-debug\\src\\Paciente.json");
+    //pacienteListFromJson = FileManager::deserialize(dataFromJSonFile);
     //for (Paciente paciente: pacienteListFromJson) {
       //  std::cout << paciente.toString() << std::endl;
     //}

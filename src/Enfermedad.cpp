@@ -51,14 +51,6 @@ string Enfermedad::toString() {
     return s.str();
 }
 
-const vector<Paciente> &Enfermedad::getListaPacientes() const {
-    return listaPacientes;
-}
-
-void Enfermedad::setListaPacientes(const vector<Paciente> &listaPacientes) {
-    Enfermedad::listaPacientes = listaPacientes;
-}
-
 
 
 
