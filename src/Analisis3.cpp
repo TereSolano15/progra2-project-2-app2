@@ -6,6 +6,7 @@
 
 string Analisis3::analisis(vector<Paciente> pacientes) {
     stringstream s;
+    int l = 0;
     string secuencia= pacientes.data()->getSecuencia();
     string enfermedad = pacientes.data()->getEnfermedadList().data()->getSecuencia();
     int cantidad = 0;
@@ -20,10 +21,15 @@ string Analisis3::analisis(vector<Paciente> pacientes) {
                     cantidad++;
                 }
                 for(int k=0; k<pacientes.size();k++) {
-                    if (cantidad > 0 && cantidad < 3) {
-                        s << pacientes.at(k).getNombre() <<" Tiene 35% de posibilidad de padecer: " << enfermedad << endl;
-                    } else {
-                        s <<pacientes.at(k).getNombre()<< " Tiene 65% de posibilidad de padecer: " << enfermedad << endl;
+                    while(l < pacientes.at(k).getEnfermedadList().size()) {
+                        if (cantidad > 0 && cantidad < 3) {
+                            s << pacientes.at(k).getNombre() << " Tiene 35% de posibilidad de padecer: "
+                              << pacientes.at(k).getEnfermedadList().at(l).getNombre() << endl;
+                        } else {
+                            s << pacientes.at(k).getNombre() << " Tiene 65% de posibilidad de padecer: "
+                              << pacientes.at(k).getEnfermedadList().at(l).getNombre() << endl;
+                        }
+                        l++;
                     }
                 }
             }
