@@ -1,4 +1,3 @@
-/*
 //
 // Created by Tere Solano on 6/11/2020.
 //
@@ -10,7 +9,6 @@ Analisis1::Analisis1() {}
 Analisis1::~Analisis1() {
 
 }
-*/
 /*
 Análisis #1: Crear un reporte con todas las enfermedades que
 muestre para cada una los pacientes que tienen susceptibilidad
@@ -35,7 +33,7 @@ int cantidad = 0;
             }
         }
     }
-}*//*
+}*/
 
 string Analisis1::analisis(Paciente paciente) {
     string secuencia= paciente.getSecuencia();
@@ -65,4 +63,3 @@ string Analisis1::analisis(Paciente paciente) {
     }
     return listaEnfermedad.data()->toString();
 }
-*/

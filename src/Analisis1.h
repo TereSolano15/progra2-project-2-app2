@@ -1,4 +1,3 @@
-/*
 //
 // Created by Tere Solano on 6/11/2020.
 //
@@ -24,4 +23,3 @@ public:
 
 
 #endif //MY_PROJECT_NAME_ANALISIS1_H
-*/
