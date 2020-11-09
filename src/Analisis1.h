@@ -15,7 +15,7 @@ public:
 
     virtual string analisis(Paciente);
 
-    bool insertaOrdenado(Enfermedad);
+
 
     virtual ~Analisis1();
 
