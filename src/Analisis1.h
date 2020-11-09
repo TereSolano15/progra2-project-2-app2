@@ -12,9 +12,7 @@ class Analisis1 : public AnalisisSrategy {
 public:
     Analisis1();
 
-
     virtual string analisis(Paciente);
-
 
 
     virtual ~Analisis1();

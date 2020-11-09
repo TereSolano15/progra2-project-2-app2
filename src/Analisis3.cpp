@@ -5,15 +5,12 @@
 #include "Analisis3.h"
 
 string Analisis3::analisis(Paciente paciente) {
+    stringstream s;
     string secuencia= paciente.getSecuencia();
+    string enfermedad = paciente.getEnfermedadList().data()->getNombre();
     int cantidad = 0;
     int tamanno = paciente.getEnfermedadList().data()->getNombre().length();
-    string enfermedad = paciente.getEnfermedadList().data()->getNombre();
     int caracteresIguales;
-    vector<Paciente> listaEnfermedad;
-    vector<string> listaSecuencias;
-    listaSecuencias.push_back(paciente.getSecuencia());
-
     for (int i = 0; secuencia[i] != '\0'; i++) {
         if (secuencia[i] == enfermedad[0]) {
             caracteresIguales = 0;
@@ -21,17 +18,19 @@ string Analisis3::analisis(Paciente paciente) {
                 caracteresIguales++;
                 if (caracteresIguales == tamanno) {
                     cantidad++;
-                    Enfermedad enfe = paciente.getEnfermedadList().at(j);
-                    enfe.setCantidad(cantidad);
                 }
-                if(listaEnfermedad.at(j).getEnfermedadList().at(j).getCantidad() < listaEnfermedad.at(j+1).getEnfermedadList().at(j+1).getCantidad()){
-                    listaEnfermedad.push_back(listaEnfermedad.at(j+1));
+                if(0 < cantidad < 3 ){
+                    s<<"Tiene 35% de posibilidad de padecer: "<<enfermedad<<endl;
+                }
+                else{
+                    s<<"Tiene 65% de posibilidad de padecer: "<<enfermedad<<endl;
                 }
             }
         }
     }
-    return listaEnfermedad.data()->toString();
+    return s.str();
 }
+
 
 
 Analisis3::Analisis3() {}
