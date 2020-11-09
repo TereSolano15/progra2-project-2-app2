@@ -40,22 +40,22 @@ string Analisis1::analisis(vector<Paciente> pacientes) {
     stringstream s;
     vector<Enfermedad> enfermedades = readCsv2();
     int contadorPaciente=0;
-    int l=0;
-    string secuencia= pacientes[l].getSecuencia();
-    int tamanno = pacientes[l].getEnfermedadList().data()->getSecuencia().length();
-    string enfermedad = pacientes.data()->getEnfermedadList().data()->getSecuencia();//pacientes[l].getEnfermedadList().data()->getSecuencia();
-    int caracteresIguales = 0;
-    for (int i = 0; secuencia[i] != '\0'; i++) {
-        if (secuencia[i] == enfermedad[0]) {
-            caracteresIguales = 0;
-            for (int j = 0; enfermedad[j] != '\0' && secuencia[i + j] == enfermedad[j]; j++) {
-                caracteresIguales++;
-                if (caracteresIguales == tamanno) { //paciente tiene la enfermedad
-                    l++;
-                for (int k = 0; k < enfermedades.size(); k++) {
-                    s << contadorPaciente << " pacientes tienen: " << enfermedades.at(k).getNombre() << endl;
-                    contadorPaciente++;
-                }
+    for(int m=0; m<pacientes.size();m++) {
+        string secuencia = pacientes[m].getSecuencia();
+        int tamanno = pacientes[m].getEnfermedadList().data()->getSecuencia().length();
+        string enfermedad = pacientes.data()->getEnfermedadList().data()->getSecuencia();//pacientes[l].getEnfermedadList().data()->getSecuencia();
+        int caracteresIguales = 0;
+        for (int i = 0; secuencia[i] != '\0'; i++) {
+            if (secuencia[i] == enfermedad[0]) {
+                caracteresIguales = 0;
+                for (int j = 0; enfermedad[j] != '\0' && secuencia[i + j] == enfermedad[j]; j++) {
+                    caracteresIguales++;
+                    if (caracteresIguales == tamanno) { //paciente tiene la enfermedad
+                        contadorPaciente++;
+                        for (int k = 0; k < enfermedades.size(); k++) {
+                            s << m << " pacientes tienen: " << enfermedades.at(k).getNombre() << endl;
+                        }
+                    }
                 }
             }
         }
