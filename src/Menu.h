@@ -8,14 +8,21 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include "AnalisisSrategy.h"
+#include "Analisis1.h"
+#include "Analisis2.h"
+#include "Analisis3.h"
+#include "Paciente.h"
+#include "FileManager.h"
+#include <vector>
 using namespace std;
 class Menu {
-
+private:
+    vector<Paciente> pacientes;
+    vector<Paciente> pacienteListFromJson;
+    string dataFromJSonFile;
 public:
-
-
     Menu();
-
     void mostrar0();
     int menuPrincip();
 

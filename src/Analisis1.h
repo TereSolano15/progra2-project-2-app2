@@ -12,7 +12,7 @@ class Analisis1 : public AnalisisSrategy {
 public:
     Analisis1();
 
-    virtual string analisis(Paciente);
+    string analisis(Paciente*) override;
 
     vector<Enfermedad> readCsv2();
 

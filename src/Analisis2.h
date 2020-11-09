@@ -16,7 +16,7 @@ public:
 
     void vaciar(int array[]);
 
-    virtual string analisis(Paciente);
+    string analisis(Paciente*) override;
 
     virtual ~Analisis2();
 };

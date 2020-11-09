@@ -4,12 +4,12 @@
 
 #include "Analisis3.h"
 
-string Analisis3::analisis(Paciente paciente) {
+string Analisis3::analisis(Paciente* paciente) {
     stringstream s;
-    string secuencia= paciente.getSecuencia();
-    string enfermedad = paciente.getEnfermedadList().data()->getNombre();
+    string secuencia= paciente->getSecuencia();
+    string enfermedad = paciente->getEnfermedadList().data()->getNombre();
     int cantidad = 0;
-    int tamanno = paciente.getEnfermedadList().data()->getNombre().length();
+    int tamanno = paciente->getEnfermedadList().data()->getNombre().length();
     int caracteresIguales;
     for (int i = 0; secuencia[i] != '\0'; i++) {
         if (secuencia[i] == enfermedad[0]) {

@@ -30,16 +30,15 @@ void from_json(const json &_json, Paciente &_paciente) {
     vector<Enfermedad> enfermedadList;
     json enfermedadData = _json["enfermedades"];
 
-    // this method is necessary to deserialize tha information from the vector
     for (auto & data : enfermedadData) {
         Enfermedad enfermedad;
-        enfermedad.setSecuencia(data.at("Secuencia").get<string>());
-        enfermedad.setNombre(data.at("name").get<string>());
+        enfermedad.setSecuencia(data.at("secuencia").get<string>());
+        enfermedad.setNombre(data.at("nombre").get<string>());
         enfermedadList.push_back(enfermedad);
     }
 
     _paciente.setId(_json.at("id").get<std::string>());
-    _paciente.setNombre(_json.at("name").get<std::string>());
+    _paciente.setNombre(_json.at("nombre").get<std::string>());
     _paciente.setTelefono(_json.at("telefono").get<std::string>());
     _paciente.setCorreo(_json.at("correo").get<std::string>());
     _paciente.setSecuencia(_json.at("secuencia").get<std::string>());

@@ -12,9 +12,9 @@ void Analisis2::vaciar(int array[]){
 }
 
 
-string Analisis2::analisis(Paciente paciente) {
+string Analisis2::analisis(Paciente* paciente) {
     stringstream s;
-    string cadena=paciente.getSecuencia();
+    string cadena=paciente->getSecuencia();
     string adn="ACGT ";
     int incidencias[4];
     vaciar(incidencias);
