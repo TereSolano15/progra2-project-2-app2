@@ -14,33 +14,24 @@ void Analisis2::vaciar(int array[]){
 
 string Analisis2::analisis(vector<Paciente> pacientes) {
     stringstream s;
-    string cadena=pacientes.data()->getSecuencia();
+    string cadena = pacientes.data()->getSecuencia();
     string adn="ACGT ";
     int incidencias[4];
     vaciar(incidencias);
 
-    for(int numeroPalabra=0;true;numeroPalabra++){
+    for(int numeroPalabra=0; true ;numeroPalabra++){
         vaciar(incidencias);
 
         if(cadena=="FIN"){break;}
 
-
-        for(int i=0;cadena[i]!='\0';i++)
-        {
-
-            for(int j=0;j<5;j++)
-            {
+        for(int i=0;cadena[i]!='\0';i++){
+            for(int j=0;j<5;j++){
 
                 if(cadena[i]==adn[j]){incidencias[j]++;}
             }
         }
-
-        for(int i=0;i<5;i++)
-        {
-
-            if(incidencias[i]>0)
-            {
-
+        for(int i=0;i<5;i++){
+            if(incidencias[i]>0){
                 s<<adn[i]<<" "<<incidencias[i]<<" %"<<endl;
             }
         }

@@ -31,6 +31,7 @@ vector<Enfermedad> Analisis1::readCsv2(){
     catch (std::ifstream::failure e) {
         throw std::runtime_error("Exception opening/reading/closing file");
     }
+    enfermedad_csv.erase(enfermedad_csv.begin());
     return enfermedad_csv;
 
 }
@@ -38,17 +39,23 @@ vector<Enfermedad> Analisis1::readCsv2(){
 string Analisis1::analisis(vector<Paciente> pacientes) {
     stringstream s;
     vector<Enfermedad> enfermedades = readCsv2();
-    string secuencia= pacientes.data()->getSecuencia();
-    int tamanno = enfermedades.data()->getNombre().length();
-    string enfermedad = enfermedades.data()->getNombre();
-    int caracteresIguales;
+    int contadorPaciente=0;
+    int l=0;
+    string secuencia= pacientes[l].getSecuencia();
+    int tamanno = pacientes[l].getEnfermedadList().data()->getSecuencia().length();
+    string enfermedad = pacientes.data()->getEnfermedadList().data()->getSecuencia();//pacientes[l].getEnfermedadList().data()->getSecuencia();
+    int caracteresIguales = 0;
     for (int i = 0; secuencia[i] != '\0'; i++) {
         if (secuencia[i] == enfermedad[0]) {
             caracteresIguales = 0;
             for (int j = 0; enfermedad[j] != '\0' && secuencia[i + j] == enfermedad[j]; j++) {
                 caracteresIguales++;
-                if (caracteresIguales == tamanno) {
-                    s << pacientes.data()->getNombre() <<" pacientes poseen la enfermedad: "<<enfermedad;
+                if (caracteresIguales == tamanno) { //paciente tiene la enfermedad
+                    l++;
+                for (int k = 0; k < enfermedades.size(); k++) {
+                    s << contadorPaciente << " pacientes tienen: " << enfermedades.at(k).getNombre() << endl;
+                    contadorPaciente++;
+                }
                 }
             }
         }
