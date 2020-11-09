@@ -13,7 +13,7 @@
 #include "Enfermedad.h"
 #include <fstream>
 using namespace std;
-
+class Enfermedad;
 class Paciente: public ObjetoBase{
 
 private:

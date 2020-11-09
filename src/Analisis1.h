@@ -14,6 +14,8 @@ public:
 
     virtual string analisis(Paciente);
 
+    vector<Enfermedad> readCsv2();
+
 
     virtual ~Analisis1();
 

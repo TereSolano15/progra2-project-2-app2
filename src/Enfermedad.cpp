@@ -46,8 +46,17 @@ string Enfermedad::toString() {
 
     s<<"enfermedad: " << getNombre();
     s <<" secuencia: " << getSecuencia() << endl;
+    s <<"Paciente: " << getPaciente().getNombre()<<endl;
 
     return s.str();
+}
+
+const Paciente &Enfermedad::getPaciente() const {
+    return paciente;
+}
+
+void Enfermedad::setPaciente(const Paciente &paciente) {
+    Enfermedad::paciente = paciente;
 }
 
 

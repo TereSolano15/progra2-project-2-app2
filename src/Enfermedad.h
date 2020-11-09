@@ -9,6 +9,9 @@
 #include <string>
 #include <sstream>
 #include "ObjetoBase.h"
+#include "Paciente.h"
+class Paciente;
+
 using namespace std;
 class Enfermedad : public ObjetoBase{
 
@@ -17,6 +20,7 @@ private:
     string nombre;
     string secuencia;
     int cantidad;
+    Paciente paciente;
 
 public:
 
@@ -37,6 +41,10 @@ public:
     int getCantidad() const;
 
     void setCantidad(int cantidad);
+
+    const Paciente &getPaciente() const;
+
+    void setPaciente(const Paciente &paciente);
 
     string toString() override;
 
