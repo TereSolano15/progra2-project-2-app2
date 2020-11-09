@@ -92,11 +92,4 @@ Paciente::Paciente(const string &id, const string &nombre, const string &telefon
                                                                                         enfermedadList(
                                                                                                 enfermedadList) {}
 
-const vector<Paciente> &Paciente::getPacienteList() const {
-    return pacienteList;
-}
-
-void Paciente::setPacienteList(const vector<Paciente> &pacienteList) {
-    Paciente::pacienteList = pacienteList;
-}
 

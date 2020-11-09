@@ -13,7 +13,7 @@
 #include "Enfermedad.h"
 #include <fstream>
 using namespace std;
-class Enfermedad;
+
 class Paciente: public ObjetoBase{
 
 private:
@@ -23,7 +23,6 @@ private:
     string telefono;
     string correo;
     string secuencia;
-    vector<Paciente> pacienteList;
     std::vector<Enfermedad> enfermedadList;
 
 public:
@@ -55,10 +54,6 @@ public:
     void setSecuencia(const string &secuencia);
 
     const std::vector<Enfermedad> &getEnfermedadList() const;
-
-    const vector<Paciente> &getPacienteList() const;
-
-    void setPacienteList(const vector<Paciente> &pacienteList);
 
     void setEnfermedadList(const std::vector<Enfermedad> &enfermedadList);
 

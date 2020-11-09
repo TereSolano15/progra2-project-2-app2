@@ -41,22 +41,22 @@ void Enfermedad::setCantidad(int cantidad) {
     Enfermedad::cantidad = cantidad;
 }
 
+
 string Enfermedad::toString() {
     stringstream s;
 
     s<<"enfermedad: " << getNombre();
     s <<" secuencia: " << getSecuencia() << endl;
-    s <<"Paciente: " << getPaciente().getNombre()<<endl;
 
     return s.str();
 }
 
-const Paciente &Enfermedad::getPaciente() const {
-    return paciente;
+const vector<Paciente> &Enfermedad::getListaPacientes() const {
+    return listaPacientes;
 }
 
-void Enfermedad::setPaciente(const Paciente &paciente) {
-    Enfermedad::paciente = paciente;
+void Enfermedad::setListaPacientes(const vector<Paciente> &listaPacientes) {
+    Enfermedad::listaPacientes = listaPacientes;
 }
 
 

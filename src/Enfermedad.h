@@ -8,19 +8,19 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <vector>
 #include "ObjetoBase.h"
 #include "Paciente.h"
-class Paciente;
 
 using namespace std;
+class Paciente;
 class Enfermedad : public ObjetoBase{
 
 private:
-
     string nombre;
     string secuencia;
     int cantidad;
-    Paciente paciente;
+    vector<Paciente> listaPacientes;
 
 public:
 
@@ -42,9 +42,9 @@ public:
 
     void setCantidad(int cantidad);
 
-    const Paciente &getPaciente() const;
+    const vector<Paciente> &getListaPacientes() const;
 
-    void setPaciente(const Paciente &paciente);
+    void setListaPacientes(const vector<Paciente> &listaPacientes);
 
     string toString() override;
 

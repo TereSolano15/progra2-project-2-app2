@@ -37,6 +37,7 @@ vector<Enfermedad> Analisis1::readCsv2(){
 
 string Analisis1::analisis(Paciente paciente) {
     vector<Enfermedad> enfermedades = readCsv2();
+    vector<Enfermedad> enfermedadPacientes;
     string secuencia= paciente.getSecuencia();
     int tamanno = enfermedades.data()->getNombre().length();
     string enfermedad = enfermedades.data()->getNombre();
@@ -48,7 +49,7 @@ string Analisis1::analisis(Paciente paciente) {
             for (int j = 0; enfermedad[j] != '\0' && secuencia[i + j] == enfermedad[j]; j++) {
                 caracteresIguales++;
                 if (caracteresIguales == tamanno) {
-                    enfermedades[j].setPaciente(paciente);
+                    //meter pacientes en la lista de enfermedades
                 }
             }
         }
