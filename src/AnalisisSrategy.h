@@ -11,7 +11,7 @@
 class AnalisisSrategy {
 public:
 
-    virtual string analisis(Paciente*) = 0;
+    virtual string analisis(vector<Paciente>) = 0;
 
     virtual ~AnalisisSrategy();
 };

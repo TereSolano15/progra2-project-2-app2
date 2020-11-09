@@ -13,7 +13,7 @@ public:
 
     Analisis3();
 
-    string analisis(Paciente*) override;
+    string analisis(vector<Paciente>) override;
 
     virtual ~Analisis3();
 };

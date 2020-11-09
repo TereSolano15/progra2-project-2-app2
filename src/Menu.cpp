@@ -15,26 +15,24 @@ void Menu::mostrar0() {
         opcion = menuPrincip();
         switch (opcion) {
             case 1:
-                //dataFromJSonFile = FileManager::read("C:\\Users\\Tere Solano\\CLionProjects\\progra2-project-02-app2-lions\\cmake-build-debug\\src\\Paciente.json");
-                //pacienteListFromJson = FileManager::deserialize(dataFromJSonFile);
+                dataFromJSonFile = FileManager::read("C:\\Users\\Tere Solano\\CLionProjects\\progra2-project-02-app2-lions\\cmake-build-debug\\src\\Paciente.json");
+                pacienteListFromJson = FileManager::deserialize(dataFromJSonFile);
+                cout<<"Archivo deserializado con exito" << endl;
                 system("pause");
                 system("CLS");
                 break;
             case 2:
-//                pacientes = leePacientes();
-             //   analisis1.analisis(pacientes.data());
+                cout<<analisis1.analisis(pacienteListFromJson);
                 system("pause");
                 system("CLS");
                 break;
             case 3:
-         //       pacientes = leePacientes();
-               // analisis2.analisis(pacientes.data());
+                cout<<analisis2.analisis(pacienteListFromJson)<<endl;
                 system("pause");
                 system("CLS");
                 break;
             case 4:
-           //     pacientes = leePacientes();
-          //      analisis3.analisis(pacientes.data());
+                cout<<analisis3.analisis(pacienteListFromJson)<<endl;
                 system("pause");
                 system("CLS");
                 break;

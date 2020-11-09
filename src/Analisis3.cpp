@@ -4,12 +4,12 @@
 
 #include "Analisis3.h"
 
-string Analisis3::analisis(Paciente* paciente) {
+string Analisis3::analisis(vector<Paciente> pacientes) {
     stringstream s;
-    string secuencia= paciente->getSecuencia();
-    string enfermedad = paciente->getEnfermedadList().data()->getNombre();
+    string secuencia= pacientes.data()->getSecuencia();
+    string enfermedad = pacientes.data()->getEnfermedadList().data()->getSecuencia();
     int cantidad = 0;
-    int tamanno = paciente->getEnfermedadList().data()->getNombre().length();
+    int tamanno = pacientes.data()->getEnfermedadList().data()->getNombre().length();
     int caracteresIguales;
     for (int i = 0; secuencia[i] != '\0'; i++) {
         if (secuencia[i] == enfermedad[0]) {
@@ -19,11 +19,12 @@ string Analisis3::analisis(Paciente* paciente) {
                 if (caracteresIguales == tamanno) {
                     cantidad++;
                 }
-                if(0 < cantidad < 3 ){
-                    s<<"Tiene 35% de posibilidad de padecer: "<<enfermedad<<endl;
-                }
-                else{
-                    s<<"Tiene 65% de posibilidad de padecer: "<<enfermedad<<endl;
+                for(int k=0; k<pacientes.size();k++) {
+                    if (cantidad > 0 && cantidad < 3) {
+                        s << pacientes.at(k).getNombre() <<" Tiene 35% de posibilidad de padecer: " << enfermedad << endl;
+                    } else {
+                        s <<pacientes.at(k).getNombre()<< " Tiene 65% de posibilidad de padecer: " << enfermedad << endl;
+                    }
                 }
             }
         }

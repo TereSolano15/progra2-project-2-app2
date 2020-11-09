@@ -12,7 +12,7 @@ class Analisis1 : public AnalisisSrategy {
 public:
     Analisis1();
 
-    string analisis(Paciente*) override;
+    string analisis(vector<Paciente>) override;
 
     vector<Enfermedad> readCsv2();
 

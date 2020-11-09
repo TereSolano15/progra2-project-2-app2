@@ -35,10 +35,10 @@ vector<Enfermedad> Analisis1::readCsv2(){
 
 }
 
-string Analisis1::analisis(Paciente* paciente) {
+string Analisis1::analisis(vector<Paciente> pacientes) {
     stringstream s;
     vector<Enfermedad> enfermedades = readCsv2();
-    string secuencia= paciente->getSecuencia();
+    string secuencia= pacientes.data()->getSecuencia();
     int tamanno = enfermedades.data()->getNombre().length();
     string enfermedad = enfermedades.data()->getNombre();
     int caracteresIguales;
@@ -48,7 +48,7 @@ string Analisis1::analisis(Paciente* paciente) {
             for (int j = 0; enfermedad[j] != '\0' && secuencia[i + j] == enfermedad[j]; j++) {
                 caracteresIguales++;
                 if (caracteresIguales == tamanno) {
-                    s << paciente->getNombre() <<" pacientes poseen la enfermedad: "<<enfermedad;
+                    s << pacientes.data()->getNombre() <<" pacientes poseen la enfermedad: "<<enfermedad;
                 }
             }
         }
